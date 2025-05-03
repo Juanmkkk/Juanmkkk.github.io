@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Periféricos Gamer</title>
+  <link rel="stylesheet" href="pagina.css" />
+</head>
+<body>
+  <div id="registro" class="contenedor">
+    <h2>Bienvenido a Periféricos Gamer</h2>
+    <input type="text" id="usuario" placeholder="Nombre de usuario" />
+    <input type="password" id="password" placeholder="Contraseña" />
+    <button onclick="iniciarSesion()">Iniciar sesión</button>
+    <p id="error" class="error"></p>
+    <p class="registro-link">¿No tienes cuenta? <span class="link" onclick="registrarse()">Registrarse</span></p>
+  </div>
+
+  <div id="panel" class="oculto">
+    <header>
+      <nav class="navbar">
+        <h1 class="logo">Periféricos Gamer</h1>
+        <div class="nav-buttons">
+          <button onclick="mostrarSeccion('inicio')">Inicio</button>
+          <button onclick="mostrarSeccion('productos')">Productos</button>
+          <button onclick="mostrarSeccion('contacto')">Contacto</button>
+          <button onclick="cerrarSesion()">Cerrar sesión</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="inicio" class="seccion">
+        <h2>¿Quiénes somos?</h2>
+        <p>Somos un equipo de desarrolladores mejorando dia a dia para garantizar el mejor servicio a nuestros clientes</p>
+      </section>
+
+      <section id="productos" class="seccion oculto">
+        <h2>Productos Destacados</h2>
+        <div class="grid-productos">
+          <!-- 12 productos grandes -->
+          <div class="producto">
+            <img src="https://compumise.in/wp-content/uploads/2023/03/rz01-03250100-r3m1-image-2-600x600-1.webp" alt="Mouse">
+            <h3>Mouse Razer Viper</h3>
+          </div>
+          <div class="producto">
+            <img src="https://m.media-amazon.com/images/I/71toMrOMTpL._AC_UF1000,1000_QL80_.jpg" alt="Teclado">
+            <h3>Teclado Logitech G Pro</h3>
+          </div>
+          <div class="producto">
+            <img src="https://www.notebookcheck.org/fileadmin/Notebooks/News/_nc3/1692603952830.jpg" alt="Monitor">
+            <h3>Monitor ASUS 240Hz</h3>
+          </div>
+          <div class="producto">
+            <img src="https://www.kobyinversiones.com/wp-content/uploads/2021/10/Microfono-Blue-Yeti-X-Negro-Usb-Streaming-Profesional-4.jpg" alt="Micrófono">
+            <h3>Micrófono Blue Yeti</h3>
+          </div>
+          <div class="producto">
+            <img src="https://homeofficecanella.com.gt/wp-content/uploads/2022/04/razeriskurx.jpg" alt="Silla">
+            <h3>Silla Gamer Razer X</h3>
+          </div>
+          <div class="producto">
+            <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2022/11/hyperx-cloud-stinger-core-2875743.jpg?tf=3840x" alt="Headset">
+            <h3>Auricular HyperX Cloud</h3>
+          </div>
+          <div class="producto">
+            <img src="https://importaciondigital.com/product/image/mediumlarge/gabnzxtcmh91fb01_0.png" alt="Gabinete">
+            <h3>Gabinete NZXT H9</h3>
+          </div>
+          <div class="producto">
+            <img src="https://cdn1.coppel.com/images/catalog/mkp/7529/3000/75291004-3.jpg?iresize=width:400,height:320" alt="Control">
+            <h3>Control Xbox Elite</h3>
+          </div>
+          <div class="producto">
+            <img src="https://pcsforall.co/cdn/shop/files/SSD-PSA-1450-Side_400x_crop_center.png?v=1741122874" alt="SSD">
+            <h3>SSD Samsung 1TB</h3>
+          </div>
+          <div class="producto">
+            <img src="https://micom.mx/storage/productos/medium_16165.png" alt="RAM">
+            <h3> kIT RAM Corsair 16GB</h3>
+          </div>
+          <div class="producto">
+            <img src="https://media.steelseriescdn.com/thumbs/catalog/items/63381/4901ce3edc6d47b8afaa01347a87333c.png.1200x627_q100_crop-fit_optimize.png" alt="Mousepad">
+            <h3>Mousepad SteelSeries</h3>
+          </div>
+          <div class="producto">
+            <img src="https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ada/rtx-4080/geforce-rtx-4080-super-og-1200x630.jpg" alt="GPU">
+            <h3>GPU RTX 4080 Super</h3>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="seccion oculto">
+        <h2>Contacto</h2>
+        <form onsubmit="enviarSugerencia(event)">
+          <input type="text" id="sugerencia" placeholder="Escribe tu mensaje..." required />
+          <button type="submit">Enviar</button>
+        </form>
+        <p id="mensajeSugerencia" class="mensaje"></p>
+      </section>
+    </main>
+  </div>
+
+  <script src="pagina.js"></script>
+</body>
+</html>
